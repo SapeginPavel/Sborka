@@ -67,17 +67,30 @@ void ufusr(char* param, int* retcode, int paramLen) {
     UF_MODL_create_block1(UF_NEGATIVE, coordinates_for_korpus_block_negative2, getCharArrForLengths("60", "40", "7"), &korpus_block_negative2);
 
 
-    //ОТВЕРСТИЕ в корпусе
-    double c_hole_in_korpus[3] = {
+    //ОТВЕРСТИЕ в корпусе сверху
+    double c_hole_in_korpus_above[3] = {
         coordinates_of_center[0] + 30,
         coordinates_of_center[1] + 20,
         coordinates_of_center[2] + 19
     };
-    char height[125] = "17";
-    char diam[125] = "21";
-    double direction[3] = { 0, 0, 1.0 };
-    tag_t hole_in_korpus;
-    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_korpus, height, diam, direction, &hole_in_korpus);
+    char height_above[125] = "17";
+    char diam_above[125] = "21";
+    double direction_above[3] = { 0, 0, 1.0 };
+    tag_t hole_in_korpus_above;
+    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_korpus_above, height_above, diam_above, direction_above, &hole_in_korpus_above);
+
+
+    //ОТВЕРСТИЕ в корпусе справа
+    double c_hole_in_korpus_right[3] = {
+        coordinates_of_center[0] + 30,
+        coordinates_of_center[1] + 107,
+        coordinates_of_center[2] + 25
+    };
+    char height_right[125] = "40";
+    char diam_right[125] = "13.546";
+    double direction_right[3] = { 0, -1.0, 0 };
+    tag_t hole_in_korpus_right;
+    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_korpus_right, height_right, diam_right, direction_right, &hole_in_korpus_right);
 
 
     //ПЛАСТИНА на корпусе
@@ -111,6 +124,37 @@ void ufusr(char* param, int* retcode, int paramLen) {
     UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_plastines_on_korpus, height1, diam1, direction1, &hole_in_plastines_on_korpus);
 
 
+    //БЛОК (справа, высокий)
+    double coordinates_of_long_block[3] = {
+        coordinates_of_center[0],
+        coordinates_of_center[1] + 107,
+        coordinates_of_center[2]
+    };
+    tag_t long_block;
+    UF_MODL_create_block1(UF_NULLSIGN, coordinates_of_long_block, getCharArrForLengths("60", "25", "100"), &long_block);
+
+
+    //ОТВЕРСТИЕ в высоком блоке справа
+    double c_hole_in_korpus_right_long_block[3] = {
+        coordinates_of_center[0] + 30,
+        coordinates_of_center[1] + 107 + 25,
+        coordinates_of_center[2] + 25
+    };
+    char height_right_long_block[125] = "25";
+    char diam_right_long_block[125] = "13.546";
+    double direction_right_long_block[3] = { 0, -1.0, 0 };
+    tag_t hole_in_korpus_right_long_block;
+    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_korpus_right_long_block, height_right_long_block, diam_right_long_block, direction_right_long_block, &hole_in_korpus_right_long_block);
+
+
+    //БЛОК (справа, на высоком)
+    double coordinates_of_block_on_long_block[3] = {
+        coordinates_of_center[0],
+        coordinates_of_center[1] + 107,
+        coordinates_of_center[2] + 100
+    };
+    tag_t block_on_long_block;
+    UF_MODL_create_block1(UF_NULLSIGN, coordinates_of_block_on_long_block, getCharArrForLengths("60", "25", "25"), &block_on_long_block);
 
     ///////////////////////////////////////////////
     UF_terminate();
