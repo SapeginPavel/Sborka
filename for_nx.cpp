@@ -150,14 +150,15 @@ void ufusr(char* param, int* retcode, int paramLen) {
     //ОТВЕРСТИЕ в высоком блоке сверху
     double c_hole_in_long_block_above[3] = {
         coordinates_of_center[0] + 30,
-        coordinates_of_center[1] + 107 + 25,
-        coordinates_of_center[2] + 25
+        coordinates_of_center[1] + 107 + 12.5,
+        coordinates_of_center[2] + 100
     };
-    char height_long_block_above[125] = "25";
-    char diam_long_block_above[125] = "13.546";
-    double direction_long_block_above[3] = { 0, -1.0, 0 };
+    char height_long_block_above[125] = "35";
+    char diam_long_block_above[125] = "8.16";
+    double direction_long_block_above[3] = { 0, 0, -1.0 };
     tag_t hole_in_long_block_above;
     UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_long_block_above, height_long_block_above, diam_long_block_above, direction_long_block_above, &hole_in_long_block_above);
+
 
     //БЛОК (справа, на высоком)
     double coordinates_of_block_on_long_block[3] = {
@@ -167,6 +168,19 @@ void ufusr(char* param, int* retcode, int paramLen) {
     };
     tag_t block_on_long_block;
     UF_MODL_create_block1(UF_NULLSIGN, coordinates_of_block_on_long_block, getCharArrForLengths("60", "25", "25"), &block_on_long_block);
+
+
+    //ОТВЕРСТИЕ в блоке на высоком блоке
+    double c_hole_in_block_on_long_block[3] = {
+        coordinates_of_center[0] + 30,
+        coordinates_of_center[1] + 107 + 12.5,
+        coordinates_of_center[2] + 100 + 25
+    };
+    char height_block_on_long_block[125] = "25";
+    char diam_block_on_long_block[125] = "8.16";
+    double direction_block_on_long_block[3] = { 0, 0, -1.0 };
+    tag_t hole_in_block_on_long_block;
+    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_block_on_long_block, height_block_on_long_block, diam_block_on_long_block, direction_block_on_long_block, &hole_in_block_on_long_block);
 
     ///////////////////////////////////////////////
     UF_terminate();
