@@ -6,7 +6,11 @@
 #include <string>
 #include <cstring>
 
-//TODO правильно ли в целом? Почему цилиндр не вычитается?
+#include "things/vint_m10_gost_1207_2013/vint_m10_gost_1207_2013.h"
+#include "things/shilka_m16_gost_222035_76/shilka_m16_gost_222035_76.h"
+#include "things/bolt_m20_gost_7805_70/bolt_m20_gost_7805_70.h"
+//#include "things/NXDrawUtils/NXDrawUtils.h"
+//#include "vint_m10_gost_1207_2013.h"
 
 char** getCharArrForLengths(const char* x, const char* y, const char* z) {
     char* x_copy = new char[strlen(x) + 1];
@@ -154,7 +158,7 @@ void ufusr(char* param, int* retcode, int paramLen) {
         coordinates_of_center[2] + 100
     };
     char height_long_block_above[125] = "35";
-    char diam_long_block_above[125] = "8.16";
+    char diam_long_block_above[125] = "10"; // 8.16
     double direction_long_block_above[3] = { 0, 0, -1.0 };
     tag_t hole_in_long_block_above;
     UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_long_block_above, height_long_block_above, diam_long_block_above, direction_long_block_above, &hole_in_long_block_above);
@@ -177,11 +181,31 @@ void ufusr(char* param, int* retcode, int paramLen) {
         coordinates_of_center[2] + 100 + 25
     };
     char height_block_on_long_block[125] = "25";
-    char diam_block_on_long_block[125] = "8.16";
+    char diam_block_on_long_block[125] = "10"; // 8.16
     double direction_block_on_long_block[3] = { 0, 0, -1.0 };
     tag_t hole_in_block_on_long_block;
     UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_block_on_long_block, height_block_on_long_block, diam_block_on_long_block, direction_block_on_long_block, &hole_in_block_on_long_block);
 
+
+    //ОТВЕРСТИЕ в блоке на высоком блоке (расточка)
+    double c_hole_in_block_on_long_block_boring[3] = {
+        coordinates_of_center[0] + 30,
+        coordinates_of_center[1] + 107 + 12.5,
+        coordinates_of_center[2] + 100 + 25
+    };
+    char height_block_on_long_block_boring[125] = "6";
+    char diam_block_on_long_block_boring[125] = "16.1";
+    double direction_block_on_long_block_boring[3] = { 0, 0, -1.0 };
+    tag_t hole_in_block_on_long_block_boring;
+    UF_MODL_create_cyl1(UF_NEGATIVE, c_hole_in_block_on_long_block_boring, height_block_on_long_block_boring, diam_block_on_long_block_boring, direction_block_on_long_block_boring, &hole_in_block_on_long_block_boring);
+
+    draw_vint_m10_gost_1207_2013(
+        c_hole_in_block_on_long_block_boring[0],
+        c_hole_in_block_on_long_block_boring[1],
+        c_hole_in_block_on_long_block_boring[2] - 35.5
+    );
+    draw_shilka_m16_gost_222035_76(200, 200, 200);
+    draw_bolt_m20_gost_7805_70(-100, -100, -100);
     ///////////////////////////////////////////////
     UF_terminate();
 }
