@@ -112,13 +112,13 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files\Siemens\NX 10.0\UGOPEN;C:\Program Files\Siemens\NX 10.0\UGOPENPP;C:\Users\RobotComp.ru\Desktop\OporaAuto\NXDrawUtils; C:\Users\RobotComp.ru\Desktop\OporaAuto\Utils;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\Siemens\NX 10.0\UGOPEN;C:\Program Files\Siemens\NX 10.0\UGOPENPP;C:\Users\user\source\repos\!Sborka\things\NXDrawUtils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Program Files\Siemens\NX 10.0\UGOPEN;C:\Users\RobotComp.ru\Desktop\OporaAuto\NXDrawUtils; C:\Users\RobotComp.ru\Desktop\OporaAuto\Utils;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\Siemens\NX 10.0\UGOPEN;C:\Users\user\source\repos\!Sborka\things\NXDrawUtils</AdditionalLibraryDirectories>
       <AdditionalDependencies>libufun.lib; libnxopencpp.lib; libugopenint.lib; libnxopenuicpp.lib; libopenpp.lib; libopenintpp.lib; libvmathpp.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

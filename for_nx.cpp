@@ -9,8 +9,9 @@
 #include "things/vint_m10_gost_1207_2013/vint_m10_gost_1207_2013.h"
 #include "things/shilka_m16_gost_222035_76/shilka_m16_gost_222035_76.h"
 #include "things/bolt_m20_gost_7805_70/bolt_m20_gost_7805_70.h"
-//#include "things/NXDrawUtils/NXDrawUtils.h"
-//#include "vint_m10_gost_1207_2013.h"
+#include "things/shayba_16_gost_10450_78/shayba_16_gost_10450_78.h"
+#include "things/gaika_m16_gost_5927_70/gaika_m16_gost_5927_70.h"
+#include "things/gaika_m20_gost_5927_70/gaika_m20_gost_5927_70.h"
 
 char** getCharArrForLengths(const char* x, const char* y, const char* z) {
     char* x_copy = new char[strlen(x) + 1];
@@ -204,8 +205,31 @@ void ufusr(char* param, int* retcode, int paramLen) {
         c_hole_in_block_on_long_block_boring[1],
         c_hole_in_block_on_long_block_boring[2] - 35.5
     );
-    draw_shilka_m16_gost_222035_76(200, 200, 200);
-    draw_bolt_m20_gost_7805_70(-100, -100, -100);
+    draw_shilka_m16_gost_222035_76(
+        c_hole_in_long_block_right[0],
+        c_hole_in_long_block_right[1] - 65, //глубина отверстия
+        c_hole_in_long_block_right[2]
+    );
+    draw_bolt_m20_gost_7805_70(
+        c_hole_in_korpus_above[0],
+        c_hole_in_korpus_above[1],
+        c_hole_in_korpus_above[2]
+    );
+    draw_shayba_16_gost_10450_78(
+        c_hole_in_long_block_right[0],
+        c_hole_in_long_block_right[1],
+        c_hole_in_long_block_right[2]
+    );
+    draw_gaika_m16_gost_5927_70(
+        c_hole_in_long_block_right[0],
+        c_hole_in_long_block_right[1] + 2.5, //толщина шайбы
+        c_hole_in_long_block_right[2]
+    );
+    draw_gaika_m20_gost_5927_70(
+        c_hole_in_korpus_above[0],
+        c_hole_in_korpus_above[1],
+        c_hole_in_korpus_above[2] + 33
+    );
     ///////////////////////////////////////////////
     UF_terminate();
 }

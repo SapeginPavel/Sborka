@@ -136,6 +136,15 @@
     <ProjectReference Include="things\bolt_m20_gost_7805_70\bolt_m20_gost_7805_70.vcxproj">
       <Project>{03600cb9-20bf-4d8b-92af-f64296238457}</Project>
     </ProjectReference>
+    <ProjectReference Include="things\gaika_m16_gost_5927_70\gaika_m16_gost_5927_70.vcxproj">
+      <Project>{cbd9f55d-9bb3-4e38-8c65-edf6042c65d1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="things\gaika_m20_gost_5927_70\gaika_m20_gost_5927_70.vcxproj">
+      <Project>{9a19869a-663d-4adb-b4ee-20cafe9f178b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="things\shayba_16_gost_10450_78\shayba_16_gost_10450_78.vcxproj">
+      <Project>{8d7d9d20-1dbe-4541-ae07-b896801d8dc1}</Project>
+    </ProjectReference>
     <ProjectReference Include="things\shilka_m16_gost_222035_76\shilka_m16_gost_222035_76.vcxproj">
       <Project>{59cf1030-4646-44a6-8298-66b1dabfad98}</Project>
     </ProjectReference>
