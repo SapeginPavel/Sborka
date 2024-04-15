@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gaika_m16_gost_5927_70", "t
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gaika_m20_gost_5927_70", "things\gaika_m20_gost_5927_70\gaika_m20_gost_5927_70.vcxproj", "{9A19869A-663D-4ADB-B4EE-20CAFE9F178B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shaiba_20L_65G_013_gost_6402_70", "things\shaiba20L_65G_013_gost_6407_70\shaiba20L_65G_013_gost_6407_70.vcxproj", "{23F6583A-0D3D-4126-8D5C-8549802AE852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -93,6 +95,14 @@ Global
 		{9A19869A-663D-4ADB-B4EE-20CAFE9F178B}.Release|x64.Build.0 = Release|x64
 		{9A19869A-663D-4ADB-B4EE-20CAFE9F178B}.Release|x86.ActiveCfg = Release|Win32
 		{9A19869A-663D-4ADB-B4EE-20CAFE9F178B}.Release|x86.Build.0 = Release|Win32
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Debug|x64.ActiveCfg = Debug|x64
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Debug|x64.Build.0 = Debug|x64
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Debug|x86.ActiveCfg = Debug|Win32
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Debug|x86.Build.0 = Debug|Win32
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Release|x64.ActiveCfg = Release|x64
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Release|x64.Build.0 = Release|x64
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Release|x86.ActiveCfg = Release|Win32
+		{23F6583A-0D3D-4126-8D5C-8549802AE852}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

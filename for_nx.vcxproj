@@ -142,6 +142,9 @@
     <ProjectReference Include="things\gaika_m20_gost_5927_70\gaika_m20_gost_5927_70.vcxproj">
       <Project>{9a19869a-663d-4adb-b4ee-20cafe9f178b}</Project>
     </ProjectReference>
+    <ProjectReference Include="things\shaiba20L_65G_013_gost_6407_70\shaiba20L_65G_013_gost_6407_70.vcxproj">
+      <Project>{23f6583a-0d3d-4126-8d5c-8549802ae852}</Project>
+    </ProjectReference>
     <ProjectReference Include="things\shayba_16_gost_10450_78\shayba_16_gost_10450_78.vcxproj">
       <Project>{8d7d9d20-1dbe-4541-ae07-b896801d8dc1}</Project>
     </ProjectReference>
